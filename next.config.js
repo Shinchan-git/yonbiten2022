@@ -7,6 +7,6 @@ module.exports = withImageLoader({
     disableStaticImages: true,
   },
   env: {
-    NEXT_PUBLIC_IMAGE_DOMAIN: 'https://yonbiten2022.pages.dev'
+    NEXT_PUBLIC_IMAGE_DOMAIN: 'https://yonbiten2022.pages.dev',
   }
 })
