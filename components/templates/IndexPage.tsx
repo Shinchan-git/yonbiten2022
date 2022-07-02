@@ -12,7 +12,7 @@ const IndexPage: React.FC = () => {
       <PageTitle>
         四美展2022
       </PageTitle>
-      <PrimaryImage src="../../public/logo.png" />
+      <PrimaryImage src="/logo.png" />
     </React.Fragment>
   )
 }
