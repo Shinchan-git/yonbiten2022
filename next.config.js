@@ -7,7 +7,7 @@ const nextConfig = {
   experimental: { esmExternals: true },
   webpack: (config) => {
     config.resolve.alias['@public'] = resolve(__dirname, 'public')
-    return config;
+    return config
   },
   trailingSlash: true,
   sassOptions: {
