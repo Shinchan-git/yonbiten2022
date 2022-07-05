@@ -1,24 +1,18 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import PageTitle from '../ui/PageTitle'
 import Seo from '../common/Seo'
+import Hero from '../functional/Hero'
 
 const IndexPage: React.FC = () => {
   return (
     <React.Fragment>
       <Seo />
 
-      <PageTitle>
-        四美展2022
-      </PageTitle>
-      <img src={require("@public/images/logo.png")} css={logoStyle} />
+      <Hero />
+
+      <p>このページは現在準備中です。</p>
     </React.Fragment>
   )
 }
-
-const logoStyle = css`
-  max-width: 300px;
-  max-height: 300px;
-`
 
 export default IndexPage

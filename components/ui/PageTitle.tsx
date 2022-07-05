@@ -1,6 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { textColor } from '../../styles/colors'
+import { toFontName } from '../../styles/Font.type'
+import { breakpoints } from '../../styles/constants'
 
 type Props = {
   children?: React.ReactNode
@@ -15,13 +17,14 @@ const PageTitle: React.FC<Props> = (props) => {
 }
 
 const titleStyle = css`
+  font-size: 30px;
+  font-family: ${toFontName("NotoSans")};
   text-align: center;
-  font-size: 27px;
   color: ${textColor};
   margin: 20px 0;
   line-height: 1.7;
-  @media(min-width: 500px) {
-    font-size: 30px;
+  @media(min-width: ${breakpoints.desktop}) {
+    font-size: 32px;
   }
 `
 

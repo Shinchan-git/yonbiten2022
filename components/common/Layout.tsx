@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import Header from './Header'
 import Footer from './Footer'
 import { backgroundColor } from '../../styles/colors'
+import { pageContentMaxWidth } from '../../styles/constants'
 
 type Props = {
   children: React.ReactNode
@@ -26,7 +27,9 @@ const layoutStyle = css`
 
 const contentStyle = css`
   padding: 0 10px;
+  max-width: ${pageContentMaxWidth};
   min-height: 100vh;
+  margin: 0 auto;
 `
 
 export default Layout
