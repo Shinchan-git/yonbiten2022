@@ -1,12 +1,43 @@
-const withImageLoader = require('next-image-loader')
+const path = require('path');
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
+const { resolve } = require('path');
 
-module.exports = withImageLoader({
-  reactStrictMode: true,
-  images: {
-    loader: 'custom',
-    disableStaticImages: true,
+const nextConfig = {
+  experimental: { esmExternals: true },
+  webpack: (config) => {
+    config.resolve.alias['@public'] = resolve(__dirname, 'public')
+    return config;
   },
-  env: {
-    NEXT_PUBLIC_IMAGE_DOMAIN: 'https://yonbiten2022.pages.dev',
+  trailingSlash: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')]
+  },
+  images: {
+    disableStaticImages: true
   }
-})
+}
+
+const imgConfig = {
+  inlineImageLimit: 8192,
+  imagesFolder: 'images',
+  imagesName: '[name]-[hash].[ext]',
+  handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+  removeOriginalExtension: false,
+  optimizeImages: true,
+  mozjpeg: {
+    quality: 80
+  },
+  optipng: {
+    optimizationLevel: 3
+  },
+  pngquant: false,
+  gifsicle: {
+    interlaced: false,
+    optimizationLevel: 3
+  },
+  svgo: {
+  }
+}
+
+module.exports = withPlugins([[optimizedImages, imgConfig]], nextConfig)
