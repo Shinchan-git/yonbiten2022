@@ -1,8 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { toFontName } from '../../styles/Font.type'
-import { breakpoints } from '../../styles/constants'
 import Spacer from '../ui/Spacer'
+import { breakpoints } from '../../styles/constants'
 
 const Hero: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ const titleStyle = css`
   padding: 0;
   font-family: ${toFontName("ZennAntiqueSoft")};
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   font-size: 55px;
   @media(min-width: ${breakpoints.desktop}) {
     font-size: 65px;
