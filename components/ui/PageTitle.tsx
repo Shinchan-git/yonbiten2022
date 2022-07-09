@@ -17,14 +17,13 @@ const PageTitle: React.FC<Props> = (props) => {
 }
 
 const titleStyle = css`
-  font-size: 30px;
+  font-size: 24px;
   font-family: ${toFontName("NotoSans")};
   text-align: center;
   color: ${textColor};
-  margin: 20px 0;
   line-height: 1.7;
   @media(min-width: ${breakpoints.desktop}) {
-    font-size: 32px;
+    font-size: 26px;
   }
 `
 

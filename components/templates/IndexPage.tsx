@@ -2,6 +2,9 @@ import React from 'react'
 import { css } from '@emotion/react'
 import Seo from '../common/Seo'
 import Hero from '../functional/Hero'
+import TopInformation from '../functional/TopInformation'
+import Spacer from '../ui/Spacer'
+import Works from '../functional/Works'
 
 const IndexPage: React.FC = () => {
   return (
@@ -9,8 +12,14 @@ const IndexPage: React.FC = () => {
       <Seo />
 
       <Hero />
+      <Spacer size={18} />
 
-      <p>このページは現在準備中です。</p>
+      <TopInformation />
+      <Spacer size={50} />
+
+      <Works />
+
+      <Spacer size={18} />
     </React.Fragment>
   )
 }
