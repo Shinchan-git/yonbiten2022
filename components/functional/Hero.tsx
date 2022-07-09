@@ -7,7 +7,7 @@ import { breakpoints } from '../../styles/constants'
 const Hero: React.FC = () => {
   return (
     <React.Fragment>
-      <Spacer size={10} />
+      <Spacer size={12} />
       <div css={containerStyle}>
         <img src={require("@public/images/gradation.png")} css={imageStyle} />
         <h1 css={titleStyle}>
