@@ -36,7 +36,7 @@ const TopInformation: React.FC = () => {
         <p css={topMessageStyle}>
           東京大学, 慶應大学, 東京女子大学, 早稲田大学の美術サークルによる合同展です。
           <Spacer size={6} />
-          私たちの日頃の成果をぜひご覧ください。
+          私たちの日頃の成果をぜひご覧ください！
         </p>
       </TextContainer>
       <Spacer size={18} />

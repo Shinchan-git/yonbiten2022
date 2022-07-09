@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import Spacer from '../ui/Spacer'
 import PageTitle from '../ui/PageTitle'
 import TextContainer from '../ui/TextContainer'
+import TextLink from '../ui/TextLink'
 
 const Works: React.FC = () => {
   return (
@@ -12,15 +13,17 @@ const Works: React.FC = () => {
         <li>
           <p css={titleStyle}>東大美術サークル</p>
         </li>
-        <Spacer size={11} />
+        <Spacer size={18} />
         <li>
-          <p css={titleStyle}>慶應義塾大学 パレットクラブ</p>
+          <p css={titleStyle}>慶應大学 パレットクラブ</p>
+          <p>--作品の画像--</p>
+          <p>Twitter: <TextLink href="https://twitter.com/palette_KEIO">@palette_KEIO</TextLink></p>
         </li>
-        <Spacer size={11} />
+        <Spacer size={18} />
         <li>
           <p css={titleStyle}>東京女子大学 洋画研究会</p>
         </li>
-        <Spacer size={11} />
+        <Spacer size={18} />
         <li>
           <p css={titleStyle}>早稲田大学 絵画会</p>
         </li>
@@ -30,7 +33,8 @@ const Works: React.FC = () => {
 }
 
 const titleStyle = css`
-  font-size: 20px;
+  font-size: 22px;
+  margin: 8px 0;
 `
 
 export default Works
