@@ -18,7 +18,7 @@ const IndexPage: React.FC = () => {
       <TopInformation />
       <Spacer size={50} />
 
-      <Works />
+      {/* <Works /> */}
 
       <Spacer size={18} />
     </React.Fragment>
